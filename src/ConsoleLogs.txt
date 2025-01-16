@@ -1,0 +1,46 @@
+Method.
+Please choose an option:
+1.- Basic calculator.
+2.- Encoder.
+3.- Student average calculator.
+4.- Quit program
+
+
+Method.
+Please choose an option:
+1.- Sum (a+b)
+2.- Substract (a-b)
+3.- Multiply (a x b)
+4.- Divide (a / b)
+
+
+Method.
+Please enter the value for a:
+Please enter the value for b:
+The result is:
+
+
+Method.
+Please choose an option:
+1.- Encode a String to Base 64.
+2.- Decode a String to Base 64.
+
+
+Method.
+Please enter the string to encode:
+
+
+Method.
+Please enter the string to decode:
+
+
+Method.
+Please enter your name:
+Please enter your grade:
+Please enter the number of signatures to enroll:
+
+Method.
+Please enter the name of the signature #:
+
+Method.
+Please enter the score for #:
