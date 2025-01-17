@@ -4,10 +4,7 @@ import java.io.IOException;
 import java.math.BigDecimal;
 import java.nio.file.Files;
 import java.nio.file.Path;
-import java.util.ArrayList;
-import java.util.Arrays;
-import java.util.List;
-import java.util.Scanner;
+import java.util.*;
 import java.util.stream.IntStream;
 
 public class UserInterface {
@@ -150,14 +147,15 @@ public class UserInterface {
     private void average() {
         try {
             reader.nextLine();
+
             String[] strStream = list.get(7).lines()
                     .map(s -> {
                         System.out.println(s);
                         return reader.nextLine();
                     })
                     .toArray(String[]::new);
-
             averageC = new AverageCalculator(strStream[0], strStream[1]);
+
 
             IntStream.range(0, Integer.parseInt(strStream[2]))
                     .forEach(num -> {
@@ -168,8 +166,23 @@ public class UserInterface {
                         reader.nextLine();
                     });
 
-            averageC.printSignatures();
 
+            HashMap<String, Double> hashMap = averageC.getHashMap();
+            String separator = "-".repeat(50);
+            list.get(10)
+                    .lines()
+                    .forEach(s -> {
+                        System.out.println(separator);
+                        if (s.contains("Signature:")){
+                            hashMap.forEach((key, value) ->{
+                                System.out.println(s.replace("#", key).replace("%", String.valueOf(value)));
+                            });
+                        } else if(s.contains("Student Name:")){
+                            System.out.println(s.replace("#", averageC.getName()).replace("%", averageC.getGrade()));
+                        } else {
+                            System.out.println(s.replace("#", averageC.getStatus()).replace("%", String.valueOf(averageC.getAverage())));
+                        }
+                    });
 
         } catch (Exception e){
             System.out.println(e);

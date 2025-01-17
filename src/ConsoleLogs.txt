@@ -39,8 +39,14 @@ Please enter your name:
 Please enter your grade:
 Please enter the number of signatures to enroll:
 
+
 Method.
 Please enter the name of the signature #:
 
 Method.
 Please enter the score for #:
+
+Method.
+Student Name: #                 Grade: %
+Signature: #                    Score: %
+Final Average: %               Status: #
